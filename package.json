@@ -1,0 +1,26 @@
+{
+  "name": "@oojob/protorepo-company-node",
+  "version": "0.0.1",
+  "description": "company service grpc generated code",
+  "main": "service_pb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oojob/protorepo-company-node.git"
+  },
+  "keywords": [
+    "comapny"
+  ],
+  "author": "nirajgeorgian <nirajgeorgian@gmail.com> (https://github.com/nirajgeorgian)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oojob/protorepo-company-node/issues"
+  },
+  "homepage": "https://github.com/oojob/protorepo-company-node#readme",
+  "dependencies": {
+    "@types/google-protobuf": "^3.7.2",
+    "google-protobuf": "^3.11.4"
+  }
+}
