@@ -2,7 +2,7 @@
   "name": "@oojob/protorepo-company-node",
   "version": "0.0.1",
   "description": "company service grpc generated code",
-  "main": "service_pb.js",
+  "main": "service_grpc_pb.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
