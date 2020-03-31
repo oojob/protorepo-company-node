@@ -1,5 +1,10 @@
 // GENERATED CODE -- DO NOT EDIT!
 
+// Original file comments:
+// *
+// Company entity related messages.
+//
+// This file is resposible for all operation related to company entity.
 'use strict';
 var grpc = require('grpc');
 var service_pb = require('./service_pb.js');
@@ -30,6 +35,7 @@ function deserialize_company_CreateCompanyRes(buffer_arg) {
 // *
 // Service defination for company entity
 var CompanyService = exports.CompanyService = {
+  // / Used to create an company entity
   createCompany: {
     path: '/company.Company/CreateCompany',
     requestStream: false,
