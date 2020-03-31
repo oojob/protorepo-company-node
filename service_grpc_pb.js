@@ -27,6 +27,8 @@ function deserialize_company_CreateCompanyRes(buffer_arg) {
 }
 
 
+// *
+// Service defination for company entity
 var CompanyService = exports.CompanyService = {
   createCompany: {
     path: '/company.Company/CreateCompany',
