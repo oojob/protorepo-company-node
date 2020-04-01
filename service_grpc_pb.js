@@ -70,7 +70,7 @@ var CompanyServiceService = exports.CompanyServiceService = {
   readCompanies: {
     path: '/company.CompanyService/ReadCompanies',
     requestStream: false,
-    responseStream: false,
+    responseStream: true,
     requestType: service_pb.Empty,
     responseType: service_pb.ReadCompaniesRes,
     requestSerialize: serialize_company_Empty,

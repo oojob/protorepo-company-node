@@ -21,9 +21,8 @@ export class CompanyServiceClient extends grpc.Client {
   createCompany(argument: service_pb.Company, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
   createCompany(argument: service_pb.Company, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
   createCompany(argument: service_pb.Company, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  readCompanies(argument: service_pb.Empty, callback: grpc.requestCallback<service_pb.ReadCompaniesRes>): grpc.ClientUnaryCall;
-  readCompanies(argument: service_pb.Empty, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.ReadCompaniesRes>): grpc.ClientUnaryCall;
-  readCompanies(argument: service_pb.Empty, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.ReadCompaniesRes>): grpc.ClientUnaryCall;
+  readCompanies(argument: service_pb.Empty, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<service_pb.ReadCompaniesRes>;
+  readCompanies(argument: service_pb.Empty, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<service_pb.ReadCompaniesRes>;
   readCompany(argument: service_pb.Id, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
   readCompany(argument: service_pb.Id, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
   readCompany(argument: service_pb.Id, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
