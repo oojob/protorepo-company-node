@@ -58,8 +58,10 @@ export class Company extends jspb.Message {
   getDescription(): string;
   setDescription(value: string): void;
 
-  getLastActive(): string;
-  setLastActive(value: string): void;
+  hasLastActive(): boolean;
+  clearLastActive(): void;
+  getLastActive(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setLastActive(value?: google_protobuf_timestamp_pb.Timestamp): void;
 
   getHiringStatus(): boolean;
   setHiringStatus(value: boolean): void;
@@ -100,7 +102,7 @@ export namespace Company {
     foundedYear: string,
     noOfEmployees?: Range.AsObject,
     description: string,
-    lastActive: string,
+    lastActive?: google_protobuf_timestamp_pb.Timestamp.AsObject,
     hiringStatus: boolean,
     skillsList: Array<string>,
     createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,

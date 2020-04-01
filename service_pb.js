@@ -310,7 +310,7 @@ proto.company.Company.toObject = function(includeInstance, msg) {
     foundedYear: jspb.Message.getFieldWithDefault(msg, 7, ""),
     noOfEmployees: (f = msg.getNoOfEmployees()) && proto.company.Range.toObject(includeInstance, f),
     description: jspb.Message.getFieldWithDefault(msg, 10, ""),
-    lastActive: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    lastActive: (f = msg.getLastActive()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     hiringStatus: jspb.Message.getBooleanFieldWithDefault(msg, 12, false),
     skillsList: (f = jspb.Message.getRepeatedField(msg, 13)) == null ? undefined : f,
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
@@ -389,7 +389,8 @@ proto.company.Company.deserializeBinaryFromReader = function(msg, reader) {
       msg.setDescription(value);
       break;
     case 11:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setLastActive(value);
       break;
     case 12:
@@ -504,10 +505,11 @@ proto.company.Company.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getLastActive();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       11,
-      f
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getHiringStatus();
@@ -725,20 +727,39 @@ proto.company.Company.prototype.setDescription = function(value) {
 
 
 /**
- * optional string last_active = 11;
- * @return {string}
+ * optional google.protobuf.Timestamp last_active = 11;
+ * @return {?proto.google.protobuf.Timestamp}
  */
 proto.company.Company.prototype.getLastActive = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 11));
 };
 
 
 /**
- * @param {string} value
+ * @param {?proto.google.protobuf.Timestamp|undefined} value
+ * @return {!proto.company.Company} returns this
+*/
+proto.company.Company.prototype.setLastActive = function(value) {
+  return jspb.Message.setWrapperField(this, 11, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
  * @return {!proto.company.Company} returns this
  */
-proto.company.Company.prototype.setLastActive = function(value) {
-  return jspb.Message.setProto3StringField(this, 11, value);
+proto.company.Company.prototype.clearLastActive = function() {
+  return this.setLastActive(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.company.Company.prototype.hasLastActive = function() {
+  return jspb.Message.getField(this, 11) != null;
 };
 
 
