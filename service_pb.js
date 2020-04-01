@@ -310,7 +310,7 @@ proto.company.Company.toObject = function(includeInstance, msg) {
     foundedYear: jspb.Message.getFieldWithDefault(msg, 7, ""),
     noOfEmployees: (f = msg.getNoOfEmployees()) && proto.company.Range.toObject(includeInstance, f),
     description: jspb.Message.getFieldWithDefault(msg, 10, ""),
-    lastActive: jspb.Message.getBooleanFieldWithDefault(msg, 11, false),
+    lastActive: jspb.Message.getFieldWithDefault(msg, 11, ""),
     hiringStatus: jspb.Message.getBooleanFieldWithDefault(msg, 12, false),
     skillsList: (f = jspb.Message.getRepeatedField(msg, 13)) == null ? undefined : f,
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
@@ -389,7 +389,7 @@ proto.company.Company.deserializeBinaryFromReader = function(msg, reader) {
       msg.setDescription(value);
       break;
     case 11:
-      var value = /** @type {boolean} */ (reader.readBool());
+      var value = /** @type {string} */ (reader.readString());
       msg.setLastActive(value);
       break;
     case 12:
@@ -504,8 +504,8 @@ proto.company.Company.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getLastActive();
-  if (f) {
-    writer.writeBool(
+  if (f.length > 0) {
+    writer.writeString(
       11,
       f
     );
@@ -725,20 +725,20 @@ proto.company.Company.prototype.setDescription = function(value) {
 
 
 /**
- * optional bool last_active = 11;
- * @return {boolean}
+ * optional string last_active = 11;
+ * @return {string}
  */
 proto.company.Company.prototype.getLastActive = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 11, false));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
 };
 
 
 /**
- * @param {boolean} value
+ * @param {string} value
  * @return {!proto.company.Company} returns this
  */
 proto.company.Company.prototype.setLastActive = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 11, value);
+  return jspb.Message.setProto3StringField(this, 11, value);
 };
 
 
