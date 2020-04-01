@@ -144,29 +144,3 @@ export namespace Id {
   }
 }
 
-export class ReadCompaniesRes extends jspb.Message {
-  clearCompaniesList(): void;
-  getCompaniesList(): Array<Company>;
-  setCompaniesList(value: Array<Company>): void;
-  addCompanies(value?: Company, index?: number): Company;
-
-  getStatus(): boolean;
-  setStatus(value: boolean): void;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): ReadCompaniesRes.AsObject;
-  static toObject(includeInstance: boolean, msg: ReadCompaniesRes): ReadCompaniesRes.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ReadCompaniesRes, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): ReadCompaniesRes;
-  static deserializeBinaryFromReader(message: ReadCompaniesRes, reader: jspb.BinaryReader): ReadCompaniesRes;
-}
-
-export namespace ReadCompaniesRes {
-  export type AsObject = {
-    companiesList: Array<Company.AsObject>,
-    status: boolean,
-  }
-}
-

@@ -43,17 +43,6 @@ function deserialize_company_Id(buffer_arg) {
   return service_pb.Id.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_company_ReadCompaniesRes(arg) {
-  if (!(arg instanceof service_pb.ReadCompaniesRes)) {
-    throw new Error('Expected argument of type company.ReadCompaniesRes');
-  }
-  return new Buffer(arg.serializeBinary());
-}
-
-function deserialize_company_ReadCompaniesRes(buffer_arg) {
-  return service_pb.ReadCompaniesRes.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
 
 var CompanyServiceService = exports.CompanyServiceService = {
   createCompany: {
@@ -72,11 +61,11 @@ var CompanyServiceService = exports.CompanyServiceService = {
     requestStream: false,
     responseStream: true,
     requestType: service_pb.Empty,
-    responseType: service_pb.ReadCompaniesRes,
+    responseType: service_pb.Company,
     requestSerialize: serialize_company_Empty,
     requestDeserialize: deserialize_company_Empty,
-    responseSerialize: serialize_company_ReadCompaniesRes,
-    responseDeserialize: deserialize_company_ReadCompaniesRes,
+    responseSerialize: serialize_company_Company,
+    responseDeserialize: deserialize_company_Company,
   },
   readCompany: {
     path: '/company.CompanyService/ReadCompany',
