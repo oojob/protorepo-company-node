@@ -6,15 +6,31 @@
 import * as service_pb from "./service_pb";
 import * as grpc from "grpc";
 
-interface ICompanyService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
-  createCompany: grpc.MethodDefinition<service_pb.CreateCompanyReq, service_pb.CreateCompanyRes>;
+interface ICompanyServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
+  createCompany: grpc.MethodDefinition<service_pb.Company, service_pb.Id>;
+  readCompanies: grpc.MethodDefinition<service_pb.Empty, service_pb.ReadCompaniesRes>;
+  readCompany: grpc.MethodDefinition<service_pb.Id, service_pb.Company>;
+  updateCompany: grpc.MethodDefinition<service_pb.Company, service_pb.Id>;
+  deleteCompany: grpc.MethodDefinition<service_pb.Id, service_pb.Id>;
 }
 
-export const CompanyService: ICompanyService;
+export const CompanyServiceService: ICompanyServiceService;
 
-export class CompanyClient extends grpc.Client {
+export class CompanyServiceClient extends grpc.Client {
   constructor(address: string, credentials: grpc.ChannelCredentials, options?: object);
-  createCompany(argument: service_pb.CreateCompanyReq, callback: grpc.requestCallback<service_pb.CreateCompanyRes>): grpc.ClientUnaryCall;
-  createCompany(argument: service_pb.CreateCompanyReq, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.CreateCompanyRes>): grpc.ClientUnaryCall;
-  createCompany(argument: service_pb.CreateCompanyReq, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.CreateCompanyRes>): grpc.ClientUnaryCall;
+  createCompany(argument: service_pb.Company, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  createCompany(argument: service_pb.Company, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  createCompany(argument: service_pb.Company, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  readCompanies(argument: service_pb.Empty, callback: grpc.requestCallback<service_pb.ReadCompaniesRes>): grpc.ClientUnaryCall;
+  readCompanies(argument: service_pb.Empty, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.ReadCompaniesRes>): grpc.ClientUnaryCall;
+  readCompanies(argument: service_pb.Empty, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.ReadCompaniesRes>): grpc.ClientUnaryCall;
+  readCompany(argument: service_pb.Id, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
+  readCompany(argument: service_pb.Id, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
+  readCompany(argument: service_pb.Id, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
+  updateCompany(argument: service_pb.Company, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  updateCompany(argument: service_pb.Company, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  updateCompany(argument: service_pb.Company, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  deleteCompany(argument: service_pb.Id, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  deleteCompany(argument: service_pb.Id, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  deleteCompany(argument: service_pb.Id, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
 }

@@ -2,52 +2,171 @@
 // file: service.proto
 
 import * as jspb from "google-protobuf";
+import * as google_protobuf_timestamp_pb from "google-protobuf/google/protobuf/timestamp_pb";
 
-export class CreateCompanyReq extends jspb.Message {
-  getName(): string;
-  setName(value: string): void;
+export class Range extends jspb.Message {
+  getMin(): number;
+  setMin(value: number): void;
 
-  getDescriptioon(): string;
-  setDescriptioon(value: string): void;
+  getMax(): number;
+  setMax(value: number): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CreateCompanyReq.AsObject;
-  static toObject(includeInstance: boolean, msg: CreateCompanyReq): CreateCompanyReq.AsObject;
+  toObject(includeInstance?: boolean): Range.AsObject;
+  static toObject(includeInstance: boolean, msg: Range): Range.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: CreateCompanyReq, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CreateCompanyReq;
-  static deserializeBinaryFromReader(message: CreateCompanyReq, reader: jspb.BinaryReader): CreateCompanyReq;
+  static serializeBinaryToWriter(message: Range, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Range;
+  static deserializeBinaryFromReader(message: Range, reader: jspb.BinaryReader): Range;
 }
 
-export namespace CreateCompanyReq {
+export namespace Range {
   export type AsObject = {
-    name: string,
-    descriptioon: string,
+    min: number,
+    max: number,
   }
 }
 
-export class CreateCompanyRes extends jspb.Message {
-  getStatus(): boolean;
-  setStatus(value: boolean): void;
+export class Company extends jspb.Message {
+  getId(): string;
+  setId(value: string): void;
 
+  getName(): string;
+  setName(value: string): void;
+
+  getCreatedBy(): string;
+  setCreatedBy(value: string): void;
+
+  getUrl(): string;
+  setUrl(value: string): void;
+
+  getLogo(): string;
+  setLogo(value: string): void;
+
+  getLocation(): string;
+  setLocation(value: string): void;
+
+  getFoundedYear(): string;
+  setFoundedYear(value: string): void;
+
+  hasNoOfEmployees(): boolean;
+  clearNoOfEmployees(): void;
+  getNoOfEmployees(): Range | undefined;
+  setNoOfEmployees(value?: Range): void;
+
+  getDescription(): string;
+  setDescription(value: string): void;
+
+  getLastActive(): boolean;
+  setLastActive(value: boolean): void;
+
+  getHiringStatus(): boolean;
+  setHiringStatus(value: boolean): void;
+
+  clearSkillsList(): void;
+  getSkillsList(): Array<string>;
+  setSkillsList(value: Array<string>): void;
+  addSkills(value: string, index?: number): string;
+
+  hasCreatedAt(): boolean;
+  clearCreatedAt(): void;
+  getCreatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setCreatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  hasUpdatedAt(): boolean;
+  clearUpdatedAt(): void;
+  getUpdatedAt(): google_protobuf_timestamp_pb.Timestamp | undefined;
+  setUpdatedAt(value?: google_protobuf_timestamp_pb.Timestamp): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Company.AsObject;
+  static toObject(includeInstance: boolean, msg: Company): Company.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Company, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Company;
+  static deserializeBinaryFromReader(message: Company, reader: jspb.BinaryReader): Company;
+}
+
+export namespace Company {
+  export type AsObject = {
+    id: string,
+    name: string,
+    createdBy: string,
+    url: string,
+    logo: string,
+    location: string,
+    foundedYear: string,
+    noOfEmployees?: Range.AsObject,
+    description: string,
+    lastActive: boolean,
+    hiringStatus: boolean,
+    skillsList: Array<string>,
+    createdAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+    updatedAt?: google_protobuf_timestamp_pb.Timestamp.AsObject,
+  }
+}
+
+export class Empty extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Empty.AsObject;
+  static toObject(includeInstance: boolean, msg: Empty): Empty.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Empty, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Empty;
+  static deserializeBinaryFromReader(message: Empty, reader: jspb.BinaryReader): Empty;
+}
+
+export namespace Empty {
+  export type AsObject = {
+  }
+}
+
+export class Id extends jspb.Message {
   getId(): string;
   setId(value: string): void;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CreateCompanyRes.AsObject;
-  static toObject(includeInstance: boolean, msg: CreateCompanyRes): CreateCompanyRes.AsObject;
+  toObject(includeInstance?: boolean): Id.AsObject;
+  static toObject(includeInstance: boolean, msg: Id): Id.AsObject;
   static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
   static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: CreateCompanyRes, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CreateCompanyRes;
-  static deserializeBinaryFromReader(message: CreateCompanyRes, reader: jspb.BinaryReader): CreateCompanyRes;
+  static serializeBinaryToWriter(message: Id, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Id;
+  static deserializeBinaryFromReader(message: Id, reader: jspb.BinaryReader): Id;
 }
 
-export namespace CreateCompanyRes {
+export namespace Id {
   export type AsObject = {
-    status: boolean,
     id: string,
+  }
+}
+
+export class ReadCompaniesRes extends jspb.Message {
+  clearCompaniesList(): void;
+  getCompaniesList(): Array<Company>;
+  setCompaniesList(value: Array<Company>): void;
+  addCompanies(value?: Company, index?: number): Company;
+
+  getStatus(): boolean;
+  setStatus(value: boolean): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ReadCompaniesRes.AsObject;
+  static toObject(includeInstance: boolean, msg: ReadCompaniesRes): ReadCompaniesRes.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: ReadCompaniesRes, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ReadCompaniesRes;
+  static deserializeBinaryFromReader(message: ReadCompaniesRes, reader: jspb.BinaryReader): ReadCompaniesRes;
+}
+
+export namespace ReadCompaniesRes {
+  export type AsObject = {
+    companiesList: Array<Company.AsObject>,
+    status: boolean,
   }
 }
 
