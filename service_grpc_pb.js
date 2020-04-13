@@ -21,6 +21,17 @@ function deserialize_company_Company(buffer_arg) {
   return service_pb.Company.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_company_CompanyAllResponse(arg) {
+  if (!(arg instanceof service_pb.CompanyAllResponse)) {
+    throw new Error('Expected argument of type company.CompanyAllResponse');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_company_CompanyAllResponse(buffer_arg) {
+  return service_pb.CompanyAllResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_company_Empty(arg) {
   if (!(arg instanceof service_pb.Empty)) {
     throw new Error('Expected argument of type company.Empty');
@@ -41,6 +52,17 @@ function serialize_company_Id(arg) {
 
 function deserialize_company_Id(buffer_arg) {
   return service_pb.Id.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_company_Pagination(arg) {
+  if (!(arg instanceof service_pb.Pagination)) {
+    throw new Error('Expected argument of type company.Pagination');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_company_Pagination(buffer_arg) {
+  return service_pb.Pagination.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 
@@ -66,6 +88,17 @@ var CompanyServiceService = exports.CompanyServiceService = {
     requestDeserialize: deserialize_company_Empty,
     responseSerialize: serialize_company_Company,
     responseDeserialize: deserialize_company_Company,
+  },
+  readAllCompanies: {
+    path: '/company.CompanyService/ReadAllCompanies',
+    requestStream: false,
+    responseStream: false,
+    requestType: service_pb.Pagination,
+    responseType: service_pb.CompanyAllResponse,
+    requestSerialize: serialize_company_Pagination,
+    requestDeserialize: deserialize_company_Pagination,
+    responseSerialize: serialize_company_CompanyAllResponse,
+    responseDeserialize: deserialize_company_CompanyAllResponse,
   },
   readCompany: {
     path: '/company.CompanyService/ReadCompany',

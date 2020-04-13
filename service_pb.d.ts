@@ -28,6 +28,30 @@ export namespace Range {
   }
 }
 
+export class Pagination extends jspb.Message {
+  getSkip(): string;
+  setSkip(value: string): void;
+
+  getLimit(): number;
+  setLimit(value: number): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Pagination.AsObject;
+  static toObject(includeInstance: boolean, msg: Pagination): Pagination.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Pagination, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Pagination;
+  static deserializeBinaryFromReader(message: Pagination, reader: jspb.BinaryReader): Pagination;
+}
+
+export namespace Pagination {
+  export type AsObject = {
+    skip: string,
+    limit: number,
+  }
+}
+
 export class Company extends jspb.Message {
   getId(): string;
   setId(value: string): void;
@@ -143,6 +167,28 @@ export class Id extends jspb.Message {
 export namespace Id {
   export type AsObject = {
     id: string,
+  }
+}
+
+export class CompanyAllResponse extends jspb.Message {
+  clearCompaniesList(): void;
+  getCompaniesList(): Array<Company>;
+  setCompaniesList(value: Array<Company>): void;
+  addCompanies(value?: Company, index?: number): Company;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): CompanyAllResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: CompanyAllResponse): CompanyAllResponse.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: CompanyAllResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): CompanyAllResponse;
+  static deserializeBinaryFromReader(message: CompanyAllResponse, reader: jspb.BinaryReader): CompanyAllResponse;
+}
+
+export namespace CompanyAllResponse {
+  export type AsObject = {
+    companiesList: Array<Company.AsObject>,
   }
 }
 
