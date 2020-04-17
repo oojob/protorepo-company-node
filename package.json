@@ -1,9 +1,10 @@
 {
   "name": "@oojob/protorepo-company-node",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "company service grpc generated code",
   "main": "service_grpc_pb.js",
   "scripts": {
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,8 @@
   "dependencies": {
     "@types/google-protobuf": "^3.7.2",
     "google-protobuf": "^3.11.4"
+  },
+  "devDependencies": {
+    "standard-version": "^7.1.0"
   }
 }
