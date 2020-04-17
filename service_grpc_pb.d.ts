@@ -13,6 +13,8 @@ interface ICompanyServiceService extends grpc.ServiceDefinition<grpc.UntypedServ
   readCompany: grpc.MethodDefinition<service_pb.Id, service_pb.Company>;
   updateCompany: grpc.MethodDefinition<service_pb.Company, service_pb.Id>;
   deleteCompany: grpc.MethodDefinition<service_pb.Id, service_pb.Id>;
+  check: grpc.MethodDefinition<service_pb.HealthCheckRequest, service_pb.HealthCheckResponse>;
+  watch: grpc.MethodDefinition<service_pb.HealthCheckRequest, service_pb.HealthCheckResponse>;
 }
 
 export const CompanyServiceService: ICompanyServiceService;
@@ -36,4 +38,9 @@ export class CompanyServiceClient extends grpc.Client {
   deleteCompany(argument: service_pb.Id, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
   deleteCompany(argument: service_pb.Id, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
   deleteCompany(argument: service_pb.Id, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
+  check(argument: service_pb.HealthCheckRequest, callback: grpc.requestCallback<service_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
+  check(argument: service_pb.HealthCheckRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
+  check(argument: service_pb.HealthCheckRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
+  watch(argument: service_pb.HealthCheckRequest, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<service_pb.HealthCheckResponse>;
+  watch(argument: service_pb.HealthCheckRequest, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<service_pb.HealthCheckResponse>;
 }

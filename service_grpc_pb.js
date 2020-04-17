@@ -43,6 +43,28 @@ function deserialize_company_Empty(buffer_arg) {
   return service_pb.Empty.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_company_HealthCheckRequest(arg) {
+  if (!(arg instanceof service_pb.HealthCheckRequest)) {
+    throw new Error('Expected argument of type company.HealthCheckRequest');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_company_HealthCheckRequest(buffer_arg) {
+  return service_pb.HealthCheckRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_company_HealthCheckResponse(arg) {
+  if (!(arg instanceof service_pb.HealthCheckResponse)) {
+    throw new Error('Expected argument of type company.HealthCheckResponse');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_company_HealthCheckResponse(buffer_arg) {
+  return service_pb.HealthCheckResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_company_Id(arg) {
   if (!(arg instanceof service_pb.Id)) {
     throw new Error('Expected argument of type company.Id');
@@ -132,6 +154,28 @@ var CompanyServiceService = exports.CompanyServiceService = {
     requestDeserialize: deserialize_company_Id,
     responseSerialize: serialize_company_Id,
     responseDeserialize: deserialize_company_Id,
+  },
+  check: {
+    path: '/company.CompanyService/Check',
+    requestStream: false,
+    responseStream: false,
+    requestType: service_pb.HealthCheckRequest,
+    responseType: service_pb.HealthCheckResponse,
+    requestSerialize: serialize_company_HealthCheckRequest,
+    requestDeserialize: deserialize_company_HealthCheckRequest,
+    responseSerialize: serialize_company_HealthCheckResponse,
+    responseDeserialize: deserialize_company_HealthCheckResponse,
+  },
+  watch: {
+    path: '/company.CompanyService/Watch',
+    requestStream: false,
+    responseStream: true,
+    requestType: service_pb.HealthCheckRequest,
+    responseType: service_pb.HealthCheckResponse,
+    requestSerialize: serialize_company_HealthCheckRequest,
+    requestDeserialize: deserialize_company_HealthCheckRequest,
+    responseSerialize: serialize_company_HealthCheckResponse,
+    responseDeserialize: deserialize_company_HealthCheckResponse,
   },
 };
 
