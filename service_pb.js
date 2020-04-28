@@ -302,17 +302,17 @@ proto.company.Company.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional oojob.protobuf.Identifier identity = 1;
- * @return {?proto.oojob.protobuf.Identifier}
+ * optional github.com.oojob.protobuf.Identifier identity = 1;
+ * @return {?proto.github.com.oojob.protobuf.Identifier}
  */
 proto.company.Company.prototype.getIdentity = function() {
-  return /** @type{?proto.oojob.protobuf.Identifier} */ (
+  return /** @type{?proto.github.com.oojob.protobuf.Identifier} */ (
     jspb.Message.getWrapperField(this, oojob_protobuf_system_pb.Identifier, 1));
 };
 
 
 /**
- * @param {?proto.oojob.protobuf.Identifier|undefined} value
+ * @param {?proto.github.com.oojob.protobuf.Identifier|undefined} value
  * @return {!proto.company.Company} returns this
 */
 proto.company.Company.prototype.setIdentity = function(value) {
@@ -393,17 +393,17 @@ proto.company.Company.prototype.setLogo = function(value) {
 
 
 /**
- * optional oojob.protobuf.Range employees = 5;
- * @return {?proto.oojob.protobuf.Range}
+ * optional github.com.oojob.protobuf.Range employees = 5;
+ * @return {?proto.github.com.oojob.protobuf.Range}
  */
 proto.company.Company.prototype.getEmployees = function() {
-  return /** @type{?proto.oojob.protobuf.Range} */ (
+  return /** @type{?proto.github.com.oojob.protobuf.Range} */ (
     jspb.Message.getWrapperField(this, oojob_protobuf_system_pb.Range, 5));
 };
 
 
 /**
- * @param {?proto.oojob.protobuf.Range|undefined} value
+ * @param {?proto.github.com.oojob.protobuf.Range|undefined} value
  * @return {!proto.company.Company} returns this
 */
 proto.company.Company.prototype.setEmployees = function(value) {
@@ -430,17 +430,17 @@ proto.company.Company.prototype.hasEmployees = function() {
 
 
 /**
- * optional oojob.protobuf.Place place = 6;
- * @return {?proto.oojob.protobuf.Place}
+ * optional github.com.oojob.protobuf.Place place = 6;
+ * @return {?proto.github.com.oojob.protobuf.Place}
  */
 proto.company.Company.prototype.getPlace = function() {
-  return /** @type{?proto.oojob.protobuf.Place} */ (
+  return /** @type{?proto.github.com.oojob.protobuf.Place} */ (
     jspb.Message.getWrapperField(this, oojob_protobuf_place_pb.Place, 6));
 };
 
 
 /**
- * @param {?proto.oojob.protobuf.Place|undefined} value
+ * @param {?proto.github.com.oojob.protobuf.Place|undefined} value
  * @return {!proto.company.Company} returns this
 */
 proto.company.Company.prototype.setPlace = function(value) {
@@ -540,17 +540,17 @@ proto.company.Company.prototype.clearSkillsList = function() {
 
 
 /**
- * optional oojob.protobuf.Metadata metadata = 10;
- * @return {?proto.oojob.protobuf.Metadata}
+ * optional github.com.oojob.protobuf.Metadata metadata = 10;
+ * @return {?proto.github.com.oojob.protobuf.Metadata}
  */
 proto.company.Company.prototype.getMetadata = function() {
-  return /** @type{?proto.oojob.protobuf.Metadata} */ (
+  return /** @type{?proto.github.com.oojob.protobuf.Metadata} */ (
     jspb.Message.getWrapperField(this, oojob_protobuf_metadata_pb.Metadata, 10));
 };
 
 
 /**
- * @param {?proto.oojob.protobuf.Metadata|undefined} value
+ * @param {?proto.github.com.oojob.protobuf.Metadata|undefined} value
  * @return {!proto.company.Company} returns this
 */
 proto.company.Company.prototype.setMetadata = function(value) {
