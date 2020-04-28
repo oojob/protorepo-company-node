@@ -1,46 +1,49 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 // package: company
-// file: service.proto
+// file: services/company/service.proto
 
-import * as service_pb from "./service_pb";
+import * as services_company_service_pb from "../../services/company/service_pb";
+import * as oojob_protobuf_system_pb from "../../oojob/protobuf/system_pb";
+import * as oojob_protobuf_cursor_pb from "../../oojob/protobuf/cursor_pb";
+import * as oojob_protobuf_health_pb from "../../oojob/protobuf/health_pb";
 import * as grpc from "grpc";
 
 interface ICompanyServiceService extends grpc.ServiceDefinition<grpc.UntypedServiceImplementation> {
-  createCompany: grpc.MethodDefinition<service_pb.Company, service_pb.Id>;
-  readCompanies: grpc.MethodDefinition<service_pb.Empty, service_pb.Company>;
-  readAllCompanies: grpc.MethodDefinition<service_pb.Pagination, service_pb.CompanyAllResponse>;
-  readCompany: grpc.MethodDefinition<service_pb.Id, service_pb.Company>;
-  updateCompany: grpc.MethodDefinition<service_pb.Company, service_pb.Id>;
-  deleteCompany: grpc.MethodDefinition<service_pb.Id, service_pb.Id>;
-  check: grpc.MethodDefinition<service_pb.HealthCheckRequest, service_pb.HealthCheckResponse>;
-  watch: grpc.MethodDefinition<service_pb.HealthCheckRequest, service_pb.HealthCheckResponse>;
+  createCompany: grpc.MethodDefinition<services_company_service_pb.Company, oojob_protobuf_system_pb.Id>;
+  readCompany: grpc.MethodDefinition<oojob_protobuf_system_pb.Id, services_company_service_pb.Company>;
+  readCompanies: grpc.MethodDefinition<oojob_protobuf_system_pb.Empty, services_company_service_pb.Company>;
+  readAllCompanies: grpc.MethodDefinition<oojob_protobuf_cursor_pb.Pagination, services_company_service_pb.CompanyAllResponse>;
+  updateCompany: grpc.MethodDefinition<services_company_service_pb.Company, oojob_protobuf_system_pb.Id>;
+  deleteCompany: grpc.MethodDefinition<oojob_protobuf_system_pb.Id, oojob_protobuf_system_pb.Id>;
+  check: grpc.MethodDefinition<oojob_protobuf_health_pb.HealthCheckRequest, oojob_protobuf_health_pb.HealthCheckResponse>;
+  watch: grpc.MethodDefinition<oojob_protobuf_health_pb.HealthCheckRequest, oojob_protobuf_health_pb.HealthCheckResponse>;
 }
 
 export const CompanyServiceService: ICompanyServiceService;
 
 export class CompanyServiceClient extends grpc.Client {
   constructor(address: string, credentials: grpc.ChannelCredentials, options?: object);
-  createCompany(argument: service_pb.Company, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  createCompany(argument: service_pb.Company, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  createCompany(argument: service_pb.Company, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  readCompanies(argument: service_pb.Empty, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<service_pb.Company>;
-  readCompanies(argument: service_pb.Empty, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<service_pb.Company>;
-  readAllCompanies(argument: service_pb.Pagination, callback: grpc.requestCallback<service_pb.CompanyAllResponse>): grpc.ClientUnaryCall;
-  readAllCompanies(argument: service_pb.Pagination, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.CompanyAllResponse>): grpc.ClientUnaryCall;
-  readAllCompanies(argument: service_pb.Pagination, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.CompanyAllResponse>): grpc.ClientUnaryCall;
-  readCompany(argument: service_pb.Id, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
-  readCompany(argument: service_pb.Id, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
-  readCompany(argument: service_pb.Id, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Company>): grpc.ClientUnaryCall;
-  updateCompany(argument: service_pb.Company, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  updateCompany(argument: service_pb.Company, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  updateCompany(argument: service_pb.Company, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  deleteCompany(argument: service_pb.Id, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  deleteCompany(argument: service_pb.Id, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  deleteCompany(argument: service_pb.Id, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.Id>): grpc.ClientUnaryCall;
-  check(argument: service_pb.HealthCheckRequest, callback: grpc.requestCallback<service_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
-  check(argument: service_pb.HealthCheckRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
-  check(argument: service_pb.HealthCheckRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<service_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
-  watch(argument: service_pb.HealthCheckRequest, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<service_pb.HealthCheckResponse>;
-  watch(argument: service_pb.HealthCheckRequest, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<service_pb.HealthCheckResponse>;
+  createCompany(argument: services_company_service_pb.Company, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  createCompany(argument: services_company_service_pb.Company, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  createCompany(argument: services_company_service_pb.Company, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  readCompany(argument: oojob_protobuf_system_pb.Id, callback: grpc.requestCallback<services_company_service_pb.Company>): grpc.ClientUnaryCall;
+  readCompany(argument: oojob_protobuf_system_pb.Id, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<services_company_service_pb.Company>): grpc.ClientUnaryCall;
+  readCompany(argument: oojob_protobuf_system_pb.Id, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<services_company_service_pb.Company>): grpc.ClientUnaryCall;
+  readCompanies(argument: oojob_protobuf_system_pb.Empty, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<services_company_service_pb.Company>;
+  readCompanies(argument: oojob_protobuf_system_pb.Empty, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<services_company_service_pb.Company>;
+  readAllCompanies(argument: oojob_protobuf_cursor_pb.Pagination, callback: grpc.requestCallback<services_company_service_pb.CompanyAllResponse>): grpc.ClientUnaryCall;
+  readAllCompanies(argument: oojob_protobuf_cursor_pb.Pagination, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<services_company_service_pb.CompanyAllResponse>): grpc.ClientUnaryCall;
+  readAllCompanies(argument: oojob_protobuf_cursor_pb.Pagination, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<services_company_service_pb.CompanyAllResponse>): grpc.ClientUnaryCall;
+  updateCompany(argument: services_company_service_pb.Company, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  updateCompany(argument: services_company_service_pb.Company, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  updateCompany(argument: services_company_service_pb.Company, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  deleteCompany(argument: oojob_protobuf_system_pb.Id, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  deleteCompany(argument: oojob_protobuf_system_pb.Id, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  deleteCompany(argument: oojob_protobuf_system_pb.Id, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<oojob_protobuf_system_pb.Id>): grpc.ClientUnaryCall;
+  check(argument: oojob_protobuf_health_pb.HealthCheckRequest, callback: grpc.requestCallback<oojob_protobuf_health_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
+  check(argument: oojob_protobuf_health_pb.HealthCheckRequest, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<oojob_protobuf_health_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
+  check(argument: oojob_protobuf_health_pb.HealthCheckRequest, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<oojob_protobuf_health_pb.HealthCheckResponse>): grpc.ClientUnaryCall;
+  watch(argument: oojob_protobuf_health_pb.HealthCheckRequest, metadataOrOptions?: grpc.Metadata | grpc.CallOptions | null): grpc.ClientReadableStream<oojob_protobuf_health_pb.HealthCheckResponse>;
+  watch(argument: oojob_protobuf_health_pb.HealthCheckRequest, metadata?: grpc.Metadata | null, options?: grpc.CallOptions | null): grpc.ClientReadableStream<oojob_protobuf_health_pb.HealthCheckResponse>;
 }

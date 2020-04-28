@@ -1,113 +1,135 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 // Original file comments:
-// *
-// Company entity related messages.
 //
+// Created on Sun Apr 27 2020
+//
+// Company entity related messages.
 // This file is resposible for all operation related to company entity.
+//
+// @authors nirajgeorgian@oojob.io (Niraj Kishore)
+//
+// Copyright (c) 2020 - oojob
 'use strict';
 var grpc = require('grpc');
-var service_pb = require('./service_pb.js');
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+var services_company_service_pb = require('../../services/company/service_pb.js');
+var oojob_protobuf_system_pb = require('../../oojob/protobuf/system_pb.js');
+var oojob_protobuf_place_pb = require('../../oojob/protobuf/place_pb.js');
+var oojob_protobuf_metadata_pb = require('../../oojob/protobuf/metadata_pb.js');
+var oojob_protobuf_cursor_pb = require('../../oojob/protobuf/cursor_pb.js');
+var oojob_protobuf_health_pb = require('../../oojob/protobuf/health_pb.js');
 
 function serialize_company_Company(arg) {
-  if (!(arg instanceof service_pb.Company)) {
+  if (!(arg instanceof services_company_service_pb.Company)) {
     throw new Error('Expected argument of type company.Company');
   }
   return new Buffer(arg.serializeBinary());
 }
 
 function deserialize_company_Company(buffer_arg) {
-  return service_pb.Company.deserializeBinary(new Uint8Array(buffer_arg));
+  return services_company_service_pb.Company.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_company_CompanyAllResponse(arg) {
-  if (!(arg instanceof service_pb.CompanyAllResponse)) {
+  if (!(arg instanceof services_company_service_pb.CompanyAllResponse)) {
     throw new Error('Expected argument of type company.CompanyAllResponse');
   }
   return new Buffer(arg.serializeBinary());
 }
 
 function deserialize_company_CompanyAllResponse(buffer_arg) {
-  return service_pb.CompanyAllResponse.deserializeBinary(new Uint8Array(buffer_arg));
+  return services_company_service_pb.CompanyAllResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_company_Empty(arg) {
-  if (!(arg instanceof service_pb.Empty)) {
-    throw new Error('Expected argument of type company.Empty');
+function serialize_oojob_protobuf_Empty(arg) {
+  if (!(arg instanceof oojob_protobuf_system_pb.Empty)) {
+    throw new Error('Expected argument of type oojob.protobuf.Empty');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_company_Empty(buffer_arg) {
-  return service_pb.Empty.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_oojob_protobuf_Empty(buffer_arg) {
+  return oojob_protobuf_system_pb.Empty.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_company_HealthCheckRequest(arg) {
-  if (!(arg instanceof service_pb.HealthCheckRequest)) {
-    throw new Error('Expected argument of type company.HealthCheckRequest');
+function serialize_oojob_protobuf_HealthCheckRequest(arg) {
+  if (!(arg instanceof oojob_protobuf_health_pb.HealthCheckRequest)) {
+    throw new Error('Expected argument of type oojob.protobuf.HealthCheckRequest');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_company_HealthCheckRequest(buffer_arg) {
-  return service_pb.HealthCheckRequest.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_oojob_protobuf_HealthCheckRequest(buffer_arg) {
+  return oojob_protobuf_health_pb.HealthCheckRequest.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_company_HealthCheckResponse(arg) {
-  if (!(arg instanceof service_pb.HealthCheckResponse)) {
-    throw new Error('Expected argument of type company.HealthCheckResponse');
+function serialize_oojob_protobuf_HealthCheckResponse(arg) {
+  if (!(arg instanceof oojob_protobuf_health_pb.HealthCheckResponse)) {
+    throw new Error('Expected argument of type oojob.protobuf.HealthCheckResponse');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_company_HealthCheckResponse(buffer_arg) {
-  return service_pb.HealthCheckResponse.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_oojob_protobuf_HealthCheckResponse(buffer_arg) {
+  return oojob_protobuf_health_pb.HealthCheckResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_company_Id(arg) {
-  if (!(arg instanceof service_pb.Id)) {
-    throw new Error('Expected argument of type company.Id');
+function serialize_oojob_protobuf_Id(arg) {
+  if (!(arg instanceof oojob_protobuf_system_pb.Id)) {
+    throw new Error('Expected argument of type oojob.protobuf.Id');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_company_Id(buffer_arg) {
-  return service_pb.Id.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_oojob_protobuf_Id(buffer_arg) {
+  return oojob_protobuf_system_pb.Id.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_company_Pagination(arg) {
-  if (!(arg instanceof service_pb.Pagination)) {
-    throw new Error('Expected argument of type company.Pagination');
+function serialize_oojob_protobuf_Pagination(arg) {
+  if (!(arg instanceof oojob_protobuf_cursor_pb.Pagination)) {
+    throw new Error('Expected argument of type oojob.protobuf.Pagination');
   }
   return new Buffer(arg.serializeBinary());
 }
 
-function deserialize_company_Pagination(buffer_arg) {
-  return service_pb.Pagination.deserializeBinary(new Uint8Array(buffer_arg));
+function deserialize_oojob_protobuf_Pagination(buffer_arg) {
+  return oojob_protobuf_cursor_pb.Pagination.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 
+//
+// CompanyService service file for company entity
 var CompanyServiceService = exports.CompanyServiceService = {
   createCompany: {
     path: '/company.CompanyService/CreateCompany',
     requestStream: false,
     responseStream: false,
-    requestType: service_pb.Company,
-    responseType: service_pb.Id,
+    requestType: services_company_service_pb.Company,
+    responseType: oojob_protobuf_system_pb.Id,
     requestSerialize: serialize_company_Company,
     requestDeserialize: deserialize_company_Company,
-    responseSerialize: serialize_company_Id,
-    responseDeserialize: deserialize_company_Id,
+    responseSerialize: serialize_oojob_protobuf_Id,
+    responseDeserialize: deserialize_oojob_protobuf_Id,
+  },
+  readCompany: {
+    path: '/company.CompanyService/ReadCompany',
+    requestStream: false,
+    responseStream: false,
+    requestType: oojob_protobuf_system_pb.Id,
+    responseType: services_company_service_pb.Company,
+    requestSerialize: serialize_oojob_protobuf_Id,
+    requestDeserialize: deserialize_oojob_protobuf_Id,
+    responseSerialize: serialize_company_Company,
+    responseDeserialize: deserialize_company_Company,
   },
   readCompanies: {
     path: '/company.CompanyService/ReadCompanies',
     requestStream: false,
     responseStream: true,
-    requestType: service_pb.Empty,
-    responseType: service_pb.Company,
-    requestSerialize: serialize_company_Empty,
-    requestDeserialize: deserialize_company_Empty,
+    requestType: oojob_protobuf_system_pb.Empty,
+    responseType: services_company_service_pb.Company,
+    requestSerialize: serialize_oojob_protobuf_Empty,
+    requestDeserialize: deserialize_oojob_protobuf_Empty,
     responseSerialize: serialize_company_Company,
     responseDeserialize: deserialize_company_Company,
   },
@@ -115,67 +137,56 @@ var CompanyServiceService = exports.CompanyServiceService = {
     path: '/company.CompanyService/ReadAllCompanies',
     requestStream: false,
     responseStream: false,
-    requestType: service_pb.Pagination,
-    responseType: service_pb.CompanyAllResponse,
-    requestSerialize: serialize_company_Pagination,
-    requestDeserialize: deserialize_company_Pagination,
+    requestType: oojob_protobuf_cursor_pb.Pagination,
+    responseType: services_company_service_pb.CompanyAllResponse,
+    requestSerialize: serialize_oojob_protobuf_Pagination,
+    requestDeserialize: deserialize_oojob_protobuf_Pagination,
     responseSerialize: serialize_company_CompanyAllResponse,
     responseDeserialize: deserialize_company_CompanyAllResponse,
-  },
-  readCompany: {
-    path: '/company.CompanyService/ReadCompany',
-    requestStream: false,
-    responseStream: false,
-    requestType: service_pb.Id,
-    responseType: service_pb.Company,
-    requestSerialize: serialize_company_Id,
-    requestDeserialize: deserialize_company_Id,
-    responseSerialize: serialize_company_Company,
-    responseDeserialize: deserialize_company_Company,
   },
   updateCompany: {
     path: '/company.CompanyService/UpdateCompany',
     requestStream: false,
     responseStream: false,
-    requestType: service_pb.Company,
-    responseType: service_pb.Id,
+    requestType: services_company_service_pb.Company,
+    responseType: oojob_protobuf_system_pb.Id,
     requestSerialize: serialize_company_Company,
     requestDeserialize: deserialize_company_Company,
-    responseSerialize: serialize_company_Id,
-    responseDeserialize: deserialize_company_Id,
+    responseSerialize: serialize_oojob_protobuf_Id,
+    responseDeserialize: deserialize_oojob_protobuf_Id,
   },
   deleteCompany: {
     path: '/company.CompanyService/DeleteCompany',
     requestStream: false,
     responseStream: false,
-    requestType: service_pb.Id,
-    responseType: service_pb.Id,
-    requestSerialize: serialize_company_Id,
-    requestDeserialize: deserialize_company_Id,
-    responseSerialize: serialize_company_Id,
-    responseDeserialize: deserialize_company_Id,
+    requestType: oojob_protobuf_system_pb.Id,
+    responseType: oojob_protobuf_system_pb.Id,
+    requestSerialize: serialize_oojob_protobuf_Id,
+    requestDeserialize: deserialize_oojob_protobuf_Id,
+    responseSerialize: serialize_oojob_protobuf_Id,
+    responseDeserialize: deserialize_oojob_protobuf_Id,
   },
   check: {
     path: '/company.CompanyService/Check',
     requestStream: false,
     responseStream: false,
-    requestType: service_pb.HealthCheckRequest,
-    responseType: service_pb.HealthCheckResponse,
-    requestSerialize: serialize_company_HealthCheckRequest,
-    requestDeserialize: deserialize_company_HealthCheckRequest,
-    responseSerialize: serialize_company_HealthCheckResponse,
-    responseDeserialize: deserialize_company_HealthCheckResponse,
+    requestType: oojob_protobuf_health_pb.HealthCheckRequest,
+    responseType: oojob_protobuf_health_pb.HealthCheckResponse,
+    requestSerialize: serialize_oojob_protobuf_HealthCheckRequest,
+    requestDeserialize: deserialize_oojob_protobuf_HealthCheckRequest,
+    responseSerialize: serialize_oojob_protobuf_HealthCheckResponse,
+    responseDeserialize: deserialize_oojob_protobuf_HealthCheckResponse,
   },
   watch: {
     path: '/company.CompanyService/Watch',
     requestStream: false,
     responseStream: true,
-    requestType: service_pb.HealthCheckRequest,
-    responseType: service_pb.HealthCheckResponse,
-    requestSerialize: serialize_company_HealthCheckRequest,
-    requestDeserialize: deserialize_company_HealthCheckRequest,
-    responseSerialize: serialize_company_HealthCheckResponse,
-    responseDeserialize: deserialize_company_HealthCheckResponse,
+    requestType: oojob_protobuf_health_pb.HealthCheckRequest,
+    responseType: oojob_protobuf_health_pb.HealthCheckResponse,
+    requestSerialize: serialize_oojob_protobuf_HealthCheckRequest,
+    requestDeserialize: deserialize_oojob_protobuf_HealthCheckRequest,
+    responseSerialize: serialize_oojob_protobuf_HealthCheckResponse,
+    responseDeserialize: deserialize_oojob_protobuf_HealthCheckResponse,
   },
 };
 
