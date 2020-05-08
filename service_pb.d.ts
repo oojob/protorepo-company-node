@@ -2,17 +2,17 @@
 // file: services/company/service.proto
 
 import * as jspb from "google-protobuf";
-import * as oojob_protobuf_system_pb from "@oojob/oojob-protobuf/system_pb";
-import * as oojob_protobuf_place_pb from "@oojob/oojob-protobuf/place_pb";
-import * as oojob_protobuf_metadata_pb from "@oojob/oojob-protobuf/metadata_pb";
-import * as oojob_protobuf_cursor_pb from "@oojob/oojob-protobuf/cursor_pb";
-import * as oojob_protobuf_health_pb from "@oojob/oojob-protobuf/health_pb";
+import * as github_com_oojob_protobuf_system_pb from "@oojob/oojob-protobuf/system_pb";
+import * as github_com_oojob_protobuf_place_pb from "@oojob/oojob-protobuf/place_pb";
+import * as github_com_oojob_protobuf_metadata_pb from "@oojob/oojob-protobuf/metadata_pb";
+import * as github_com_oojob_protobuf_cursor_pb from "@oojob/oojob-protobuf/cursor_pb";
+import * as github_com_oojob_protobuf_health_pb from "@oojob/oojob-protobuf/health_pb";
 
 export class Company extends jspb.Message {
   hasIdentity(): boolean;
   clearIdentity(): void;
-  getIdentity(): oojob_protobuf_system_pb.Identifier | undefined;
-  setIdentity(value?: oojob_protobuf_system_pb.Identifier): void;
+  getIdentity(): github_com_oojob_protobuf_system_pb.Identifier | undefined;
+  setIdentity(value?: github_com_oojob_protobuf_system_pb.Identifier): void;
 
   getAdmin(): string;
   setAdmin(value: string): void;
@@ -25,13 +25,13 @@ export class Company extends jspb.Message {
 
   hasEmployees(): boolean;
   clearEmployees(): void;
-  getEmployees(): oojob_protobuf_system_pb.Range | undefined;
-  setEmployees(value?: oojob_protobuf_system_pb.Range): void;
+  getEmployees(): github_com_oojob_protobuf_system_pb.Range | undefined;
+  setEmployees(value?: github_com_oojob_protobuf_system_pb.Range): void;
 
   hasPlace(): boolean;
   clearPlace(): void;
-  getPlace(): oojob_protobuf_place_pb.Place | undefined;
-  setPlace(value?: oojob_protobuf_place_pb.Place): void;
+  getPlace(): github_com_oojob_protobuf_place_pb.Place | undefined;
+  setPlace(value?: github_com_oojob_protobuf_place_pb.Place): void;
 
   getFoundedYear(): string;
   setFoundedYear(value: string): void;
@@ -46,8 +46,8 @@ export class Company extends jspb.Message {
 
   hasMetadata(): boolean;
   clearMetadata(): void;
-  getMetadata(): oojob_protobuf_metadata_pb.Metadata | undefined;
-  setMetadata(value?: oojob_protobuf_metadata_pb.Metadata): void;
+  getMetadata(): github_com_oojob_protobuf_metadata_pb.Metadata | undefined;
+  setMetadata(value?: github_com_oojob_protobuf_metadata_pb.Metadata): void;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Company.AsObject;
@@ -61,16 +61,16 @@ export class Company extends jspb.Message {
 
 export namespace Company {
   export type AsObject = {
-    identity?: oojob_protobuf_system_pb.Identifier.AsObject,
+    identity?: github_com_oojob_protobuf_system_pb.Identifier.AsObject,
     admin: string,
     url: string,
     logo: string,
-    employees?: oojob_protobuf_system_pb.Range.AsObject,
-    place?: oojob_protobuf_place_pb.Place.AsObject,
+    employees?: github_com_oojob_protobuf_system_pb.Range.AsObject,
+    place?: github_com_oojob_protobuf_place_pb.Place.AsObject,
     foundedYear: string,
     hiringStatus: boolean,
     skillsList: Array<string>,
-    metadata?: oojob_protobuf_metadata_pb.Metadata.AsObject,
+    metadata?: github_com_oojob_protobuf_metadata_pb.Metadata.AsObject,
   }
 }
 
