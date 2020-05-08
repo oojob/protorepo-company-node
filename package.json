@@ -1,6 +1,6 @@
 {
   "name": "@oojob/protorepo-company-node",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "company service grpc generated code",
   "main": "service_grpc_pb.js",
   "scripts": {
