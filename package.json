@@ -1,6 +1,6 @@
 {
   "name": "@oojob/protorepo-company-node",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "company service grpc generated code",
   "main": "service_grpc_pb.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/oojob/protorepo-company-node#readme",
   "dependencies": {},
   "devDependencies": {
-    "@oojob/oojob-protobuf": "0.0.8",
+    "@oojob/oojob-protobuf": "0.0.9",
     "@types/google-protobuf": "^3.7.2",
     "google-protobuf": "^3.12.2",
     "grpc": "^1.24.3",
